@@ -1,0 +1,39 @@
+# ===== KEIL uVision =====
+Objects/
+Listings/
+*.bak
+*.tmp
+*.lnp
+*.M51
+*.hex
+*.bin
+*.axf
+*.map
+*.o
+*.d
+*.obj
+*.lib
+*.iex
+*.htm
+*.dep
+*.crf
+*.plg
+*.uvgui.*
+*.uvguix.*
+
+# ===== PROTEUS =====
+*.dbg
+*.log
+*.workspace
+*.res
+*.prj.bak
+Backup/
+
+# ===== WINDOWS =====
+Thumbs.db
+desktop.ini
+
+# ===== IDE TEMP =====
+.vscode/
+*.autosave
+simulation/Project Backups/
