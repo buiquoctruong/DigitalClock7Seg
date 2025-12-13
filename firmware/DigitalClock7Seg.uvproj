@@ -392,19 +392,14 @@
               <FilePath>.\ThuVien\dichNoiTiep.c</FilePath>
             </File>
             <File>
-              <FileName>port.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\ThuVien\port.h</FilePath>
-            </File>
-            <File>
               <FileName>I2C.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\ThuVien\I2C.c</FilePath>
             </File>
             <File>
-              <FileName>DS1307.c</FileName>
+              <FileName>RTC.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ThuVien\DS1307.c</FilePath>
+              <FilePath>.\ThuVien\RTC.c</FilePath>
             </File>
           </Files>
         </Group>
