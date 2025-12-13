@@ -1,35 +1,40 @@
 #include <REGX52.H>
 #include <.\ThuVien\Delay.h>
-#define LED_P0 P0
-#define LED_P3 P3
-sbit Start = P1^0;
-sbit Stop = P1^1;
+#define LED_PORT0 P0
+#define LED_PORT3 P3
+sbit NutNhanB1 = P1^0;
 //	
-unsigned char Delay1SvaQuetPhim(){
+unsigned char Delay500mSVaQuetPhim() {
 	unsigned char i;
-	for (i=0; i<100; i++) {
-		Delay_ms(10);			
-		if (Stop == 0) {
-			LED_P0 = 0x00;
-			LED_P3 = 0x00;
-			return 1;
+	for (i=0; i<50; i++) {
+		Delay_ms(10);
+		if (NutNhanB1 == 0) {
+			return 1; 	
 		}
 	}
-	return 0;
+	return 0; 
 }
 //	
 void main() {
-	LED_P0 = 0x00;
-	LED_P3 = 0x00;
-	while(1) {	// while(1)_1
-		if (Start == 0) {	// if_1
-			while(1) {	// while(1)_2
-				LED_P0 = ~LED_P0;
-				LED_P3 = ~LED_P3;
-				if (Delay1SvaQuetPhim() ){	// if_2
-					break;
-				}
-			}
+	unsigned char i;
+	while(1){
+		LED_PORT0 = 0x00;
+		for (i=0; i<20; i++) {
+			if (Delay500mSVaQuetPhim()) 
+				break; 		
+			LED_PORT0 = ~LED_PORT0; 
+		}
+		LED_PORT0 = 0x55;
+		for(i=0;i<20;i++) {
+			if (Delay500mSVaQuetPhim()) 
+				break;
+			LED_PORT0 = ~LED_PORT0; 	
+		}
+		LED_PORT0 = 0x0F;
+		for (i=0; i<20; i++) {
+			if (Delay500mSVaQuetPhim()) 
+				break;
+			LED_PORT0 = ~LED_PORT0;
 		}
 	}
 }
