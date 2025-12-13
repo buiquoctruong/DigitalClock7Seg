@@ -1,12 +1,14 @@
 #include <REGX52.H>
 #include <.\ThuVien\Delay.h>
-sbit LED_PIN = P0^0;
-void main () {
-	P0 = 0;
-	P3 = 0;
-	LED_PIN = 0;
-	while(1){
-		LED_PIN = !LED_PIN;
+#define LED_PORT0 P0
+#define LED_PORT3 P3
+void main(){
+	LED_PORT0 = 0x01;
+	LED_PORT3 = 0x80;
+	Delay_ms(500);
+	while(1){	
+		LED_PORT0 = LED_PORT0 << 1;
+		LED_PORT3 = LED_PORT3 >> 1;
 		Delay_ms(500);
 	}
 }
