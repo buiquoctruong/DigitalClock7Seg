@@ -401,6 +401,11 @@
               <FileType>1</FileType>
               <FilePath>.\ThuVien\I2C.c</FilePath>
             </File>
+            <File>
+              <FileName>DS1307.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ThuVien\DS1307.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
