@@ -386,6 +386,16 @@
               <FileType>1</FileType>
               <FilePath>.\ThuVien\Delay.c</FilePath>
             </File>
+            <File>
+              <FileName>dichNoiTiep.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ThuVien\dichNoiTiep.c</FilePath>
+            </File>
+            <File>
+              <FileName>port.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ThuVien\port.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
