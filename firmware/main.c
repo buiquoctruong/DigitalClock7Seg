@@ -2,17 +2,17 @@
 #include ".\ThuVien\Delay.h"	
 #define LED_PORT P0
 void main(){
-	unsigned char i;
-	unsigned int t;
-	while (1){
+		unsigned int t;
+		while (1){
 		t = 500;
-		for (i = 0; i < 5; i++) {
-			LED_PORT = 0x00; 	Delay_ms(t);
-			LED_PORT = ~P0; 	Delay_ms(t);
-		}
-		for (i = 0; i < 5; i++) {
-			LED_PORT = 0xAA;	Delay_ms(t);
-			LED_PORT = ~P0; 	Delay_ms(t);
-		}
+		LED_PORT = 0xFF;	Delay_ms(t);
+		LED_PORT = 0xFE; 	Delay_ms(t);
+		LED_PORT = 0xFC; 	Delay_ms(t);
+		LED_PORT = 0xF8; 	Delay_ms(t);
+		LED_PORT = 0xF0; 	Delay_ms(t);
+		LED_PORT = 0xE0; 	Delay_ms(t);
+		LED_PORT = 0xC0; 	Delay_ms(t);
+		LED_PORT = 0x80; 	Delay_ms(t);
+		LED_PORT = 0x00; 	Delay_ms(t);
 	}
 }
