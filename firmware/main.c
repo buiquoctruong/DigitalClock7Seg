@@ -1,17 +1,18 @@
 #include <regx52.h>
-unsigned char dem, tam;
-unsigned char dvi, chuc; 
-unsigned char tram;
+#include ".\ThuVien\Delay.h"
 void main(){
-	dem = 234;
-	dvi = dem%10;	
-	chuc = dem%100;
-	chuc = chuc/10;
-	tam = chuc << 4;
-	tam |= dvi;
-	P2 = tam;
-	tram = dem/100;
-	P3 = tram;
+	unsigned char dem = 0;
+	unsigned char chuc, tram, dvi, tam;
 	while(1){
+		dvi = dem%10;
+		chuc = (dem%100)/10;
+		tram = dem/100;
+		tam = chuc << 4;
+		tam |= dvi;
+		P2 = tam;
+		P3 = tram;
+		Delay_ms(100);
+		dem++;
+		dem%=1000;
 	}
 }
