@@ -14,5 +14,11 @@ sbit led6	= P1^7; // hang don vi cua Giay/Nam
 // VDK ket noi voi DS1307 - PHDTH14
 sbit SCL = P1^0;
 sbit SDA = P1^1;
+// VDK va cac nut nhan
+sbit	cheDo = P3^4;
+sbit	caiDat = P3^5;
+sbit 	tang = P3^6;
+sbit 	giam = P3^7;
+sbit	loa = P3^1;
 
 #endif	
